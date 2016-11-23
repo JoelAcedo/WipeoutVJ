@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: ba09b3481a393c14cbc52cf5a05e8788
+timeCreated: 1434981565
+licenseType: Pro
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 16
+    name: New_Graph
+    prototypeName: New_Graph
+    shaderName: 
+    shader: {fileID: 8, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: 
+    renderQueue: -1
+    lightmapFlags: 5
+    inputs:
+    - name: $time
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Centre_Marker_Marker_ColourTarget_Color
+      value:
+        scalar[0]: 0.9852941
+        scalar[1]: 0.9852941
+        scalar[2]: 0.9852941
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Centre_Marker_Type_D_Amount
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Centre_Marker_Type_C_Amount
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Centre_Marker_Type_B_Amount
+      value:
+        scalar[0]: 0.789
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Centre_Marker_Type_A_AmountOpacity
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Water_Level
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Flow_Direction
+      value:
+        scalar[0]: 0.783
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Ice
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Snow
+      value:
+        scalar[0]: 0.129
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Moss
+      value:
+        scalar[0]: 0.037
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Moss_Color
+      value:
+        scalar[0]: 0.227497
+        scalar[1]: 0.317601
+        scalar[2]: 0.0234989
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Road_Surface_Effect_Water_Color
+      value:
+        scalar[0]: 0.0299992
+        scalar[1]: 0.119997
+        scalar[2]: 0.140002
+        scalar[3]: 0.229999
+        texture: {instanceID: 0}
+    - name: Left_Marking_Color
+      value:
+        scalar[0]: 0.500008
+        scalar[1]: 0.500008
+        scalar[2]: 0.500008
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Left_Marking_Type_C_LevelType_C_Level
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Left_Marking_Type_B_Level
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Left_Marking_Type_A_Level
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Markers_Paint_Thinkness
+      value:
+        scalar[0]: 0.134
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 2}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 42
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+      - first:
+          name: _BumpMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 2}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _MainTex
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 2}
+          offset: {x: 0, y: 0}
+      - first:
+          name: _ParallaxMap
+        second:
+          texture: {instanceID: 0}
+          scale: {x: 1, y: 2}
+          offset: {x: 0, y: 0}
+      floats:
+      - first:
+          name: _Parallax
+        second: 0.014642857
+      - first:
+          name: _Shininess
+        second: 0.078125
+      colors:
+      - first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      - first:
+          name: _SpecColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    textureParameters:
+    - name: New_Graph_diffuse
+      alphaSource: 5
+      filterMode: 1
+      aniso: 10
+      wrapMode: 0
+    - name: New_Graph_normal
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: New_Graph_specular
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: New_Graph_height
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 647431460
+    - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 647431462
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 647431482
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
