@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CSharp.csproj", "{BCBAE240-0632-33A3-39BE-60B7FD60FC84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
