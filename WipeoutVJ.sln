@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CSharp-firstpass.csproj", "{33096D86-7138-4EA4-A6C6-A0D28FECF99E}"
+EndProject
 Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CSharp.csproj", "{BCBAE240-0632-33A3-39BE-60B7FD60FC84}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33096D86-7138-4EA4-A6C6-A0D28FECF99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33096D86-7138-4EA4-A6C6-A0D28FECF99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33096D86-7138-4EA4-A6C6-A0D28FECF99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33096D86-7138-4EA4-A6C6-A0D28FECF99E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
