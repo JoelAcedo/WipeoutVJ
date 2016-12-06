@@ -58,6 +58,7 @@
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
+     <None Include="Assets\qub_pak\readme.txt" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEngine.UI">

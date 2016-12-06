@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\GhostFreeRoamCamera\Demo\Scripts\GUIHelper.cs" />
      <Compile Include="Assets\GhostFreeRoamCamera\Scripts\GhostFreeRoamCamera.cs" />
+     <Compile Include="Assets\ItemRotate.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Roads\EasyRoads3D\Scripts\runtimeScript.cs" />
      <None Include="Assets\GhostFreeRoamCamera\READEME.txt" />
@@ -61,6 +62,7 @@
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
+     <None Include="Assets\qub_pak\readme.txt" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
      <None Include="Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEngine.UI">
