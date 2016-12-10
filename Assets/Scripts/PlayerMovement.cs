@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Transform backward;
 	private Transform tr;
 	private Rigidbody rb;
+	private AudioSource ao;
 	private float accelerationF = 5f;
 	private float accelerationB = 3.5f;
 	private float maxSpeedF = 15f;
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody> ();	
 		forward = GameObject.Find ("Forward").GetComponent<Transform> ();
 		backward = GameObject.Find ("Backward").GetComponent<Transform> ();
+		ao = gameObject.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -58,6 +60,8 @@ public class PlayerMovement : MonoBehaviour {
 			if (rb.velocity.magnitude < maxSpeedB)
 				rb.velocity += (backward.position - tr.position) * Time.deltaTime * accelerationB;
 		} 
+		ao.pitch = Mathf.Abs (rb.velocity.magnitude / maxSpeedF) + 1f;
+		if (ao.pitch > 2f) ao.pitch = 2f;
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			tr.eulerAngles = new Vector3 (tr.eulerAngles.x, tr.eulerAngles.y+rotation, tr.eulerAngles.z);
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
