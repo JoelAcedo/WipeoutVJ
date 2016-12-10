@@ -46,21 +46,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
-     <None Include="Assets\GhostFreeRoamCamera\READEME.txt" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Diffuse.shader" />
-     <None Include="Assets\Roads\EasyRoads3D models\shaders\alpha_2sided.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Diffuse.shader" />
+     <None Include="Assets\Imported Assets\GhostFreeRoamCamera\READEME.txt" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Diffuse.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D models\shaders\alpha_2sided.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Diffuse.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
-     <None Include="Assets\qub_pak\readme.txt" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
+     <None Include="Assets\Imported Assets\qub_pak\readme.txt" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -68,7 +68,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="EasyRoads3Dv3">
- <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Roads/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
+ <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Imported Assets/Roads/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
