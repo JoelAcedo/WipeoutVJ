@@ -5,6 +5,8 @@ Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CShar
 EndProject
 Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CSharp.csproj", "{BCBAE240-0632-33A3-39BE-60B7FD60FC84}"
 EndProject
+Project("{C41C03A9-6A1E-382A-67FE-F4322D58D1A4}") = "WipeoutVJ", "Assembly-CSharp-Editor.csproj", "{E411EED4-CC27-DDFC-6270-3462E3A888BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCBAE240-0632-33A3-39BE-60B7FD60FC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E411EED4-CC27-DDFC-6270-3462E3A888BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E411EED4-CC27-DDFC-6270-3462E3A888BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E411EED4-CC27-DDFC-6270-3462E3A888BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E411EED4-CC27-DDFC-6270-3462E3A888BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -45,21 +45,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <None Include="Assets\GhostFreeRoamCamera\READEME.txt" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Diffuse.shader" />
-     <None Include="Assets\Roads\EasyRoads3D models\shaders\alpha_2sided.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Diffuse.shader" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiButtonEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiInputTextEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiListEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiPopupEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiSliderEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiTabsEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiTextAreaEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiToggleEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\Elements\InstantGuiWindowEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\InstantGuiEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\InstantGuiElementEditor.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\InstantGuiInspector.cs" />
+     <Compile Include="Assets\InstantGui\Scripts\Editor\InstantGuiStyleSetEditor.cs" />
+     <None Include="Assets\Imported Assets\GhostFreeRoamCamera\READEME.txt" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Diffuse.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D models\shaders\alpha_2sided.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Diffuse.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
-     <None Include="Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
+     <None Include="Assets\Imported Assets\qub_pak\readme.txt" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
+     <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -84,17 +97,17 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
+ <Reference Include="EasyRoads3Dv3Editor">
+ <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Imported Assets/Roads/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="EasyRoads3Dv3">
+ <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Imported Assets/Roads/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="EasyRoads3Dv3">
- <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Roads/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
- </Reference>
- <Reference Include="EasyRoads3Dv3Editor">
- <HintPath>C:/Users/Esteve/Documents/Desenvolupament/Projecte3D/WipeoutVJ/Assets/Roads/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
