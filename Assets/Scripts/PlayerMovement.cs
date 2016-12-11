@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject boost;
 	public GameObject itemPickUp;
+	public GameObject healthEffect;
 
 	private Transform forward;
 	private Transform backward;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float explosionForce = 50f;
 	private float explosionRadius = 3f;
 	private float missileSpeed = 1000f;
+	private float playerHealth = 100f;
 	private bool shield = false;
 	private bool haveBomb = false;
 	private bool haveMissile = false;
@@ -29,7 +31,6 @@ public class PlayerMovement : MonoBehaviour {
 	private Vector3 getPointOfContact() {
 		RaycastHit hit;
 		if (Physics.Raycast (transform.position, transform.forward, out hit)) {
-			Debug.Log (hit.point);
 			return hit.point;
 		}
 		return new Vector3 ();
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody> ();	
 		forward = GameObject.Find ("Forward").GetComponent<Transform> ();
 		backward = GameObject.Find ("Backward").GetComponent<Transform> ();
+		healthEffect.SetActive (false);
 		ao = gameObject.GetComponent<AudioSource> ();
 	}
 	
@@ -101,10 +103,25 @@ public class PlayerMovement : MonoBehaviour {
 			} else {
 				rb.velocity = rb.velocity.normalized * -5f;
 				rb.AddExplosionForce (explosionForce, getPointOfContact (), explosionRadius, 3f, ForceMode.Impulse);
+				playerHealth -= 25F;
 				GameObject explode = Instantiate (explosion, colider.position, colider.rotation) as GameObject;
 				Destroy (other.gameObject);
 				Destroy (explode, 1.5f);
 			}
+		}
+	}
+
+	void OnTriggerStay(Collider other) {
+		if (other.tag.Equals ("Health")) {
+			healthEffect.SetActive (true);
+			playerHealth += 25f * Time.deltaTime;
+			if (playerHealth > 100f) playerHealth = 100f;
+		}
+	}
+
+	void OnTriggerExit(Collider other) {
+		if (other.tag.Equals ("Health")) {
+			healthEffect.SetActive (false);
 		}
 	}
 }
