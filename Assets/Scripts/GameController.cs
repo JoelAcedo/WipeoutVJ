@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void quitClicked() {
+		Debug.Log ("quitClicked");
 		Application.Quit ();
 	}
 }

@@ -9,12 +9,19 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject boost;
 	public GameObject itemPickUp;
 	public GameObject healthEffect;
+	public GameObject flameCenter;
+	public GameObject flameRight;
+	public GameObject flameLeft;
+	public GameObject guiController;
 
 	private Transform forward;
 	private Transform backward;
 	private Transform tr;
 	private Rigidbody rb;
 	private AudioSource ao;
+	private ParticleSystem.EmissionModule flameC;
+	private ParticleSystem.EmissionModule flameR;
+	private ParticleSystem.EmissionModule flameL;
 	private float accelerationF = 5f;
 	private float accelerationB = 3.5f;
 	private float maxSpeedF = 15f;
@@ -37,10 +44,13 @@ public class PlayerMovement : MonoBehaviour {
 	} 
 
 	private void addRandomItem() {
-		if (Random.value < 0.5f) 
+		if (Random.value < 0.5f) {
 			haveBomb = true;
-		else
+			guiController.SendMessage ("enableBomb");
+		} else {
 			haveMissile = true;
+			guiController.SendMessage ("enableMissile");
+		}
 	}
 
 	// Use this for initialization
@@ -51,6 +61,9 @@ public class PlayerMovement : MonoBehaviour {
 		backward = GameObject.Find ("Backward").GetComponent<Transform> ();
 		healthEffect.SetActive (false);
 		ao = gameObject.GetComponent<AudioSource> ();
+		flameC = flameCenter.GetComponent<ParticleSystem> ().emission;
+		flameR = flameRight.GetComponent<ParticleSystem> ().emission;
+		flameL = flameLeft.GetComponent<ParticleSystem> ().emission;
 	}
 	
 	// Update is called once per frame
@@ -62,7 +75,10 @@ public class PlayerMovement : MonoBehaviour {
 			if (rb.velocity.magnitude < maxSpeedB)
 				rb.velocity += (backward.position - tr.position) * Time.deltaTime * accelerationB;
 		} 
-		ao.pitch = Mathf.Abs (rb.velocity.magnitude / maxSpeedF) + 1f;
+		ao.pitch = rb.velocity.magnitude / maxSpeedF + 1f;
+		flameC.rate = rb.velocity.magnitude / maxSpeedF * 100f;
+		flameR.rate = rb.velocity.magnitude / maxSpeedF * 100f;
+		flameL.rate = rb.velocity.magnitude / maxSpeedF * 100f;
 		if (ao.pitch > 2f) ao.pitch = 2f;
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			tr.eulerAngles = new Vector3 (tr.eulerAngles.x, tr.eulerAngles.y+rotation, tr.eulerAngles.z);
@@ -73,10 +89,12 @@ public class PlayerMovement : MonoBehaviour {
 			if (haveBomb) {
 				shield = true;
 				haveBomb = false;
+				guiController.SendMessage ("disableBomb");
 				GameObject leavedBomb = Instantiate (bomb, tr.position, new Quaternion ()) as GameObject;
 			} else if (haveMissile) {
 				shield = true;
 				haveMissile = false;
+				guiController.SendMessage ("disableMissile");
 				GameObject firedMissile = Instantiate (missile, tr.position, tr.rotation) as GameObject;
 				firedMissile.GetComponent<Rigidbody> ().AddRelativeForce (new Vector3 (0f, missileSpeed, 0f));
 				Destroy (firedMissile, 5f);
@@ -104,6 +122,7 @@ public class PlayerMovement : MonoBehaviour {
 				rb.velocity = rb.velocity.normalized * -5f;
 				rb.AddExplosionForce (explosionForce, getPointOfContact (), explosionRadius, 3f, ForceMode.Impulse);
 				playerHealth -= 25F;
+				guiController.SendMessage ("setHealth", playerHealth);
 				GameObject explode = Instantiate (explosion, colider.position, colider.rotation) as GameObject;
 				Destroy (other.gameObject);
 				Destroy (explode, 1.5f);
@@ -116,6 +135,7 @@ public class PlayerMovement : MonoBehaviour {
 			healthEffect.SetActive (true);
 			playerHealth += 25f * Time.deltaTime;
 			if (playerHealth > 100f) playerHealth = 100f;
+			guiController.SendMessage ("setHealth", playerHealth);
 		}
 	}
 
