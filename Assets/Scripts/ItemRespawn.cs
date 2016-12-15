@@ -3,6 +3,9 @@ using System.Collections;
 
 public class ItemRespawn : MonoBehaviour {
 
+	public GameObject itemPickUp;
+
+	private Transform tr;
 	private MeshRenderer mr;
 	private BoxCollider bc;
 
@@ -14,6 +17,7 @@ public class ItemRespawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		tr = gameObject.GetComponent<Transform> ();
 		mr = gameObject.GetComponent<MeshRenderer> ();
 		bc = gameObject.GetComponent<BoxCollider> ();
 	}
@@ -26,6 +30,8 @@ public class ItemRespawn : MonoBehaviour {
 	void itemPickedUp() {
 		mr.enabled = false;
 		bc.enabled = false;
+		GameObject item = Instantiate (itemPickUp, tr.position, tr.rotation) as GameObject;
+		Destroy (item, 2f);
 		StartCoroutine(itemTemporallyNotActive ());
 	}
 		

@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: dc939f62f99ce29448d0ecdd86f20f0f
+timeCreated: 1481536912
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bip-Stegosaurus
+    100002: Bip-Stegosaurus-Head
+    100004: Bip-Stegosaurus-HeadNub
+    100006: Bip-Stegosaurus-L-Calf
+    100008: Bip-Stegosaurus-L-Clavicle
+    100010: Bip-Stegosaurus-L-Foot
+    100012: Bip-Stegosaurus-L-Forearm
+    100014: Bip-Stegosaurus-L-ForeTwist
+    100016: Bip-Stegosaurus-L-Hand
+    100018: Bip-Stegosaurus-L-Thigh
+    100020: Bip-Stegosaurus-L-Toe0
+    100022: Bip-Stegosaurus-L-Toe0Nub
+    100024: Bip-Stegosaurus-L-UpperArm
+    100026: Bip-Stegosaurus-Neck
+    100028: Bip-Stegosaurus-Neck1
+    100030: Bip-Stegosaurus-Pelvis
+    100032: Bip-Stegosaurus-R-Calf
+    100034: Bip-Stegosaurus-R-Clavicle
+    100036: Bip-Stegosaurus-R-Foot
+    100038: Bip-Stegosaurus-R-Forearm
+    100040: Bip-Stegosaurus-R-ForeTwist
+    100042: Bip-Stegosaurus-R-Hand
+    100044: Bip-Stegosaurus-R-Thigh
+    100046: Bip-Stegosaurus-R-Toe0
+    100048: Bip-Stegosaurus-R-Toe0Nub
+    100050: Bip-Stegosaurus-R-UpperArm
+    100052: Bip-Stegosaurus-Spine
+    100054: Bip-Stegosaurus-Spine1
+    100056: Bip-Stegosaurus-Tail
+    100058: Bip-Stegosaurus-Tail1
+    100060: Bip-Stegosaurus-Tail2
+    100062: Bip-Stegosaurus-Tail3
+    100064: Bip-Stegosaurus-Tail4
+    100066: Bip-Stegosaurus-TailNub
+    100068: BoC_Stegosaurus-L-Elbow
+    100070: BoC_Stegosaurus-L-Knee
+    100072: BoC_Stegosaurus-L-Shoulder
+    100074: BoC_Stegosaurus-R-Elbow
+    100076: BoC_Stegosaurus-R-Knee
+    100078: BoC_Stegosaurus-R-Shoulder
+    100080: BoF_Stegosaurus_Jaw
+    100082: BoF_Stegosaurus_Tongue_01
+    100084: BoF_Stegosaurus_Tongue_02
+    100086: BoF_Stegosaurus_Tongue_03
+    100088: Bone001
+    100090: stegosaurus
+    100092: //RootNode
+    400000: Bip-Stegosaurus
+    400002: Bip-Stegosaurus-Head
+    400004: Bip-Stegosaurus-HeadNub
+    400006: Bip-Stegosaurus-L-Calf
+    400008: Bip-Stegosaurus-L-Clavicle
+    400010: Bip-Stegosaurus-L-Foot
+    400012: Bip-Stegosaurus-L-Forearm
+    400014: Bip-Stegosaurus-L-ForeTwist
+    400016: Bip-Stegosaurus-L-Hand
+    400018: Bip-Stegosaurus-L-Thigh
+    400020: Bip-Stegosaurus-L-Toe0
+    400022: Bip-Stegosaurus-L-Toe0Nub
+    400024: Bip-Stegosaurus-L-UpperArm
+    400026: Bip-Stegosaurus-Neck
+    400028: Bip-Stegosaurus-Neck1
+    400030: Bip-Stegosaurus-Pelvis
+    400032: Bip-Stegosaurus-R-Calf
+    400034: Bip-Stegosaurus-R-Clavicle
+    400036: Bip-Stegosaurus-R-Foot
+    400038: Bip-Stegosaurus-R-Forearm
+    400040: Bip-Stegosaurus-R-ForeTwist
+    400042: Bip-Stegosaurus-R-Hand
+    400044: Bip-Stegosaurus-R-Thigh
+    400046: Bip-Stegosaurus-R-Toe0
+    400048: Bip-Stegosaurus-R-Toe0Nub
+    400050: Bip-Stegosaurus-R-UpperArm
+    400052: Bip-Stegosaurus-Spine
+    400054: Bip-Stegosaurus-Spine1
+    400056: Bip-Stegosaurus-Tail
+    400058: Bip-Stegosaurus-Tail1
+    400060: Bip-Stegosaurus-Tail2
+    400062: Bip-Stegosaurus-Tail3
+    400064: Bip-Stegosaurus-Tail4
+    400066: Bip-Stegosaurus-TailNub
+    400068: BoC_Stegosaurus-L-Elbow
+    400070: BoC_Stegosaurus-L-Knee
+    400072: BoC_Stegosaurus-L-Shoulder
+    400074: BoC_Stegosaurus-R-Elbow
+    400076: BoC_Stegosaurus-R-Knee
+    400078: BoC_Stegosaurus-R-Shoulder
+    400080: BoF_Stegosaurus_Jaw
+    400082: BoF_Stegosaurus_Tongue_01
+    400084: BoF_Stegosaurus_Tongue_02
+    400086: BoF_Stegosaurus_Tongue_03
+    400088: Bone001
+    400090: //RootNode
+    400092: stegosaurus
+    4300000: stegosaurus
+    9500000: //RootNode
+    13700000: stegosaurus
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

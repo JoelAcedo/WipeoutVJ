@@ -69,11 +69,13 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiFrame.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
+     <Compile Include="Assets\MapAssets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
+     <Compile Include="Assets\Scripts\ComputerController.cs" />
      <Compile Include="Assets\Scripts\GUIController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\ItemRespawn.cs" />
      <Compile Include="Assets\Scripts\ItemRotate.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\Imported Assets\GhostFreeRoamCamera\READEME.txt" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
@@ -84,9 +86,11 @@
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
+     <None Include="Assets\MapAssets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
      <None Include="Assets\Imported Assets\qub_pak\readme.txt" />
+     <None Include="Assets\MapAssets\Destroyed_city_FREE\Shaders\AlphaTest-DiffuseDoubleSide.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEngine.UI">

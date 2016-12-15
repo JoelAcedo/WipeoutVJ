@@ -7,6 +7,7 @@ public class GUIController : MonoBehaviour {
 	public GameObject driveBar;
 	public Image missileGUI;
 	public Image bombGUI;
+	public Image shieldGUI;
 	public Text lapsText;
 	public Text positionText;
 	public int laps;
@@ -31,12 +32,20 @@ public class GUIController : MonoBehaviour {
 		bombGUI.enabled = true;
 	}
 
+	void enableShield() {
+		shieldGUI.enabled = true;
+	}
+
 	void disableMissile() {
 		missileGUI.enabled = false;
 	}
 
 	void disableBomb() {
 		bombGUI.enabled = false;
+	}
+
+	void disableShield() {
+		shieldGUI.enabled = false;
 	}
 
 	void setLap(int lap) {

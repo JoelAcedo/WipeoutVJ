@@ -68,9 +68,11 @@
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
+     <None Include="Assets\MapAssets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse - Bumped.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-AlphaTest-Bumped.shader" />
      <None Include="Assets\Imported Assets\qub_pak\readme.txt" />
+     <None Include="Assets\MapAssets\Destroyed_city_FREE\Shaders\AlphaTest-DiffuseDoubleSide.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\alpha_2sided.shader" />
  <Reference Include="UnityEditor.Advertisements">
