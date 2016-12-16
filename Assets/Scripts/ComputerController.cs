@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ComputerController : MonoBehaviour {
 
-	public int laps;
 	public int pointNum;
 	public GameObject missile;
 	public GameObject bomb;
@@ -13,12 +12,16 @@ public class ComputerController : MonoBehaviour {
 	public GameObject healthEffect;
 	public GameObject flameCenter;
 
+	private GameObject lastCP;
+	private GameObject guiController;
 	private Transform[] points;
 	private Transform tr;
 	private Rigidbody rb;
 	private AudioSource ao;
 	private ParticleSystem.EmissionModule flameC;
 	private int nextPoint = 0;
+	private int lap = 0;
+	private int computer = 0;
 	private float acceleration = 13f;
 	private float maxSpeed = 14f;
 	private float explosionForce = 50f;
@@ -47,6 +50,16 @@ public class ComputerController : MonoBehaviour {
 		for (int i = 0; i < pointNum; i++) {
 			points [i] = GameObject.Find ("MapPoint (" + i + ")").transform;
 		}
+	}
+
+	private string calculatePos(){
+		string[] s = lastCP.name.Split (new char[] { '(', ')' });
+		string pj = gameObject.name;
+		string pos1 = (int.Parse (s [1]) * (lap * pointNum)).ToString ();
+		int nextP = int.Parse (s [1]) + 5;
+		if (nextP >= pointNum) nextP = 0; 
+		string pos2 = Vector3.Distance (GameObject.Find ("MapPoint (" + nextP.ToString() + ")").transform.position, tr.position).ToString();
+		return pj + "_" + pos1 + "_" + pos2;
 	}
 
 	private Vector3 findClosestPlayer() {
@@ -84,6 +97,9 @@ public class ComputerController : MonoBehaviour {
 	void Start () {
 		tr = gameObject.GetComponent<Transform> ();
 		rb = gameObject.GetComponent<Rigidbody> ();
+		computer = int.Parse(gameObject.name.ToCharArray()[8].ToString());
+		guiController = GameObject.Find ("GUIController");
+		lastCP = GameObject.Find("MapPoint (0)");
 		healthEffect.SetActive (false);
 		ao = gameObject.GetComponent<AudioSource> ();
 		flameC = flameCenter.GetComponent<ParticleSystem> ().emission;
@@ -123,13 +139,14 @@ public class ComputerController : MonoBehaviour {
 			haveShield = false;
 			shield.SetActive(true);
 		}
+		guiController.SendMessage ("playerPos",calculatePos());
 	}
 
 	void OnTriggerEnter(Collider other) {
 		Transform colider = other.GetComponent<Transform> ();
 		if (other.tag.Equals ("FinishLine")) {
-			laps--;
-			if (laps < 0) Debug.Log(gameObject.name + " has finished!");
+			lap++;
+			if (lap >= 3) GameObject.Find ("GameController").SendMessage ("finishRace",computer);
 			other.GetComponent<AudioSource>().Play();
 		} else if (other.tag.Equals ("Turbo")) {
 			rb.velocity = rb.velocity.normalized * maxSpeed * 1.5f;
@@ -155,9 +172,12 @@ public class ComputerController : MonoBehaviour {
 				GameObject explode = Instantiate (explosion, colider.position, colider.rotation) as GameObject;
 				Destroy (other.gameObject);
 				Destroy (explode, 1.5f);
+				if (health <= 0f) Destroy (gameObject);
 				impacted = true;
 				StartCoroutine (playerImpacted());
 			}
+		} else if (other.tag.Equals ("CheckPoint")) {
+			lastCP = other.gameObject;
 		}
 	}
 

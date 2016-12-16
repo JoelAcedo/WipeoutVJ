@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	public int pointNum;
 	public GameObject missile;
 	public GameObject bomb;
 	public GameObject shield;
@@ -12,8 +13,10 @@ public class PlayerController : MonoBehaviour {
 	public GameObject flameCenter;
 	public GameObject flameRight;
 	public GameObject flameLeft;
+	public GameObject playerCam;
 	public GameObject guiController;
 
+	private GameObject lastCP;
 	private Transform forward;
 	private Transform backward;
 	private Transform tr;
@@ -22,15 +25,16 @@ public class PlayerController : MonoBehaviour {
 	private ParticleSystem.EmissionModule flameC;
 	private ParticleSystem.EmissionModule flameR;
 	private ParticleSystem.EmissionModule flameL;
-	private float accelerationF = 12f;
-	private float accelerationB = 9f;
-	private float maxSpeedF = 15f;
-	private float maxSpeedB = 5f;
-	private float rotation = 1f;
+	private float accelerationF = 0f;
+	private float accelerationB = 0f;
+	private float maxSpeedF = 0f;
+	private float maxSpeedB = 0f;
+	private float rotation = 0f;
 	private float explosionForce = 50f;
 	private float explosionRadius = 3f;
 	private float missileSpeed = 1000f;
 	private float playerHealth = 100f;
+	private int lap = 0;
 	private bool cantCollide = false;
 	private bool haveBomb = false;
 	private bool haveMissile = false;
@@ -58,13 +62,23 @@ public class PlayerController : MonoBehaviour {
 		return gos [pos].transform.position;
 	}
 
+	private string calculatePos(){
+		string[] s = lastCP.name.Split (new char[] { '(', ')' });
+		string pj = gameObject.name;
+		string pos1 = (int.Parse (s [1]) * (lap * pointNum)).ToString ();
+		int nextP = int.Parse (s [1]) + 5;
+		if (nextP >= pointNum) nextP = 0; 
+		string pos2 = Vector3.Distance (GameObject.Find ("MapPoint (" + nextP.ToString() + ")").transform.position, tr.position).ToString();
+		return pj + "_" + pos1 + "_" + pos2;
+	}
+		
 	private void addRandomItem() {
 		if (!(haveBomb || haveMissile || haveShield)) {
 			float rand = Random.value;
-			if (rand < 0.33f) {
+			if (rand < 0.40f) {
 				haveBomb = true;
 				guiController.SendMessage ("enableBomb");
-			} else if (rand < 0.66f) {
+			} else if (rand < 0.80f) {
 				haveMissile = true;
 				guiController.SendMessage ("enableMissile");
 			} else {
@@ -76,8 +90,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject.Find ("GameController").SendMessage ("getModel");
 		tr = gameObject.GetComponent<Transform> ();	
 		rb = gameObject.GetComponent<Rigidbody> ();	
+		lastCP = GameObject.Find("MapPoint (0)");
 		forward = GameObject.Find ("Forward").GetComponent<Transform> ();
 		backward = GameObject.Find ("Backward").GetComponent<Transform> ();
 		healthEffect.SetActive (false);
@@ -126,16 +142,32 @@ public class PlayerController : MonoBehaviour {
 			} else if (haveShield) {
 				haveShield = false;
 				guiController.SendMessage ("disableShield");
-				shield.SetActive(true);
+				shield.SetActive (true);
 			}
+		} else if (Input.GetKeyDown (KeyCode.R)) {
+			tr.position = lastCP.transform.position;
+			tr.localEulerAngles = new Vector3 (90f, 0f, 0f);
+			rb.velocity = Vector3.zero;
 		}
+		if (Input.GetKey(KeyCode.G)) {
+			playerCam.transform.localPosition = new Vector3 (0f, 0f, -5f);
+			playerCam.transform.localEulerAngles = new Vector3 (90f, 0f, -180f);
+		} else if (Input.GetKeyUp(KeyCode.G)) {
+			playerCam.transform.localPosition = new Vector3 (0f, -30f, -15f);
+			playerCam.transform.localEulerAngles = new Vector3 (-80, 0f, 0f);
+		}
+		if (Input.GetKeyDown(KeyCode.Escape) )
+			GameObject.Find ("GameController").SendMessage ("finishRace",4);
+		guiController.SendMessage ("playerPos",calculatePos());
 	}
 
 	void OnTriggerEnter(Collider other) {
 		Transform colider = other.GetComponent<Transform> ();
 		if (other.tag.Equals ("FinishLine")) {
-			//addLap
-			other.GetComponent<AudioSource>().Play();
+			lap++;
+			if (lap >= 3) GameObject.Find ("GameController").SendMessage ("finishRace",4);
+			else guiController.SendMessage ("setLap", lap);
+			other.GetComponent<AudioSource> ().Play ();
 		} else if (other.tag.Equals ("Turbo")) {
 			rb.velocity = rb.velocity.normalized * maxSpeedF * 1.5f;
 			GameObject booster = Instantiate (boost, tr) as GameObject;
@@ -145,7 +177,7 @@ public class PlayerController : MonoBehaviour {
 		} else if (other.tag.Equals ("Item")) {
 			addRandomItem ();
 			other.gameObject.SendMessage ("itemPickedUp");
-		} else if (other.tag.Equals("Bomb")) {
+		} else if (other.tag.Equals ("Bomb")) {
 			if (cantCollide) {
 				cantCollide = false;
 			} else if (shield.activeSelf) {
@@ -161,7 +193,12 @@ public class PlayerController : MonoBehaviour {
 				GameObject explode = Instantiate (explosion, colider.position, colider.rotation) as GameObject;
 				Destroy (other.gameObject);
 				Destroy (explode, 1.5f);
+				if (playerHealth <= 0f) {
+					GameObject.Find ("GameController").SendMessage ("finishRace",5);
+				}
 			}
+		} else if (other.tag.Equals ("CheckPoint")) {
+			lastCP = other.gameObject;
 		}
 	}
 
@@ -177,6 +214,24 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerExit(Collider other) {
 		if (other.tag.Equals ("Health")) {
 			healthEffect.SetActive (false);
+		}
+	}
+
+	void setModel(int model) {
+		if (model == 1) {
+			GameObject.Find ("ModelB").SetActive (false);
+			accelerationF = 14f;
+			accelerationB = 9f;
+			maxSpeedF = 15f;
+			maxSpeedB = 5f;
+			rotation = 3f;
+		} else {
+			GameObject.Find ("ModelA").SetActive (false);
+			accelerationF = 12f;
+			accelerationB = 9f;
+			maxSpeedF = 18f;
+			maxSpeedB = 5f;
+			rotation = 5f;
 		}
 	}
 }

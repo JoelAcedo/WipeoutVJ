@@ -71,11 +71,14 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
      <Compile Include="Assets\MapAssets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ComputerController.cs" />
+     <Compile Include="Assets\Scripts\FinishRace.cs" />
      <Compile Include="Assets\Scripts\GUIController.cs" />
+     <Compile Include="Assets\Scripts\GUISound.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\ItemRespawn.cs" />
      <Compile Include="Assets\Scripts\ItemRotate.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\StartRace.cs" />
      <None Include="Assets\Imported Assets\GhostFreeRoamCamera\READEME.txt" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Alpha-Diffuse.shader" />
      <None Include="Assets\Imported Assets\Roads\EasyRoads3D\shaders\EasyRoads3D-Normal-Bumped.shader" />
